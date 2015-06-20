@@ -10,7 +10,7 @@ server.route({
 	method: 'GET',
 	path: '/',
 	handler: function(request, reply) {
-		reply.file(__dirname + '/index.html');
+		reply.file(__dirname + '/public/index.html');
 	}
 });
 
@@ -19,7 +19,7 @@ server.route({
 	path: '/{param*}',
 	handler: {
 		directory: {
-			path: __dirname
+			path: __dirname + '/public'
 		}
 	}
 });
